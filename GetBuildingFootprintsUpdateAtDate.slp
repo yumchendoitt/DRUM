@@ -275,7 +275,7 @@
                     },
                     "delimiter": {
                         "expression": false,
-                        "value": ","
+                        "value": "|"
                     },
                     "ignoreEmptyStream": {
                         "value": false
@@ -288,7 +288,7 @@
                             {
                                 "expression": {
                                     "expression": true,
-                                    "value": "updatedAt"
+                                    "value": "$updatedAt"
                                 },
                                 "targetPath": {
                                     "value": "$updatedAt"
@@ -298,28 +298,22 @@
                     },
                     "quoteCharacter": {
                         "expression": false,
-                        "value": "\""
+                        "value": null
                     },
                     "quoteMode": {
                         "value": "ALL"
                     },
                     "useDefinedHeader": {
-                        "value": true
+                        "value": false
                     },
                     "userDefinedHeader": {
-                        "value": [
-                            {
-                                "headerColumn": {
-                                    "value": "$UpdateAt"
-                                }
-                            }
-                        ]
+                        "value": []
                     },
                     "writeBOM": {
                         "value": false
                     },
                     "writeHeader": {
-                        "value": false
+                        "value": true
                     }
                 },
                 "view_serial": 100
@@ -444,7 +438,7 @@
                     "transformations": {
                         "value": {
                             "mappingRoot": {
-                                "value": "$[*][*]"
+                                "value": "$"
                             },
                             "mappingTable": {
                                 "value": [
@@ -454,7 +448,7 @@
                                             "value": "$splitValue"
                                         },
                                         "targetPath": {
-                                            "value": "$UpdateAt"
+                                            "value": "$updatedAt"
                                         }
                                     }
                                 ]
